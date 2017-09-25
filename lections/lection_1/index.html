@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lection 1</title>
+    <script src="../../vendor/angular.js"></script>
+    <script src="./app/app.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="wrapper" ng-controller="firstCtrl">
+        <div class="block">
+            {{ message }}
+        </div>
+        <!--One way binding with brackets-->
+        <div class="block">
+            {{ model }}
+        </div>
+        <!--Render without binding-->
+        <div class="block" ng-non-bindable>
+            {{ model }}
+        </div>
+
+        <!--One way binding-->
+        <div class="block" ng-bind="model.age"></div>
+
+        <!--Two way binding-->
+        <div class="block">
+            <input type="text" ng-model="model.name">
+
+            {{ model.name }}
+        </div>
+        <div class="row"></div>
+
+        <!--Event click-->
+        <div class="block">
+            <button ng-click="handlerInScope()">
+                Refresh model.name
+            </button>
+        </div>
+
+        <div class="row"></div>
+
+        <!-- ng-show, ng-if, ng-hide and checkbox binding -->
+        <div class="block">
+            <input type="checkbox" ng-model="variable">
+            variable: {{ variable }}
+
+            <div class="elements__wrapper">
+                <div class="element" ng-show="variable">ng-show</div>
+                <div class="element" ng-hide="variable">ng-hide</div>
+                <div class="element" ng-if="variable">ng-if</div>
+                <div class="element">without directive</div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="row"></div>
+
+        <!-- ng-repeat -->
+        <div class="block">
+            ng-repeat
+            <ul>
+                <li ng-repeat="item in model.friends">
+                    {{ item }}
+                </li>
+            </ul>
+            <hr />
+            <h3>
+                Track by index
+            </h3>
+            <ul>
+                <li ng-repeat="item in model.friends track by $index">
+                    {{ item }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
