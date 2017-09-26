@@ -5,7 +5,7 @@ var model = {
     email: null
 };
 
-myApp.controller("firstCtrl", function ($scope, $service_1, $service_2, $factory_1) {
+myApp.controller("firstCtrl", function ($scope, $service_1, $service_2, $factory_1, $someValues, someDigit, someConst, myProv_1, myProv_2) {
 
     $scope.reset = function() {
         $scope.user = angular.copy(model);
@@ -43,7 +43,23 @@ myApp.controller("firstCtrl", function ($scope, $service_1, $service_2, $factory
         console.log($factory_1);
 
         $factory_1.method(3);
-    }
+    };
+
+    $scope.valueOne = function () {
+        console.log($someValues);
+    };
+
+    $scope.valueTwo = function () {
+        console.log(someDigit);
+    };
+
+    $scope.constOne = function() {
+        console.log(someConst);
+    };
+
+    $scope.providerOne = function () {
+        console.log(myProv_1);
+    };
 });
 
 
@@ -84,5 +100,36 @@ myApp.factory('$factory_1', function () {
         }
     }
 });
+
+myApp.value('$someValues', {
+    config1: true,
+    config2: "this is value"
+});
+
+myApp.value('someDigit', 10);
+
+myApp.constant('someConst', {
+    config1: true,
+    config2: "Default config2"
+});
+
+myApp.provider('myProv_1', function() {
+    return {
+        $get: function() {
+            var thisIsPrivate = "Private";
+            function getPrivate() {
+                return thisIsPrivate;
+            }
+
+            return {
+                variable: "This is public",
+                getPrivate: getPrivate
+            };
+        }
+    };
+});
+
+
+
 
 
