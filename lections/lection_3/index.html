@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../vendor/angular.js"></script>
+    <script src="./app/app.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="block">
+        <h2>
+            $emit, $on, $broadcast
+        </h2>
+
+        <div class="element" ng-controller="parentCtrl" ng-mouseover="hoverStatus = true" ng-mouseout="hoverStatus = false">
+            {{ title }}
+            <br />
+            Value: {{ emptyValue }}
+            <hr />
+            <span ng-show="hoverStatus">hover</span>
+
+
+            <div class="element" ng-controller="childCtrl" ng-mouseover="hoverStatus = true" ng-mouseout="hoverStatus = false">
+                {{ title }}
+                <hr />
+                <span ng-show="hoverStatus">hover</span>
+                <br /><br />
+
+                <input type="text" ng-model="info">
+                <button ng-click="sendToParent(info)">Send to parent</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+<!-- include ctrl files -->
+    <script src="./app/controllers/parent.controller.js"></script>
+    <script src="./app/controllers/child.controller.js"></script>
+</body>
+</html>

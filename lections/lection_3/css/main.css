@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.block {
+    border: 2px solid black;
+    margin: 50px 10px;
+    padding: 20px;
+    width: 700px;
+
+    overflow-x: auto;
+}
+
+.row {
+    background: rosybrown;
+    height: 20px;
+}
+
+.element {
+    border: 1px solid green;
+    padding: 10px;
+    margin: 20px;
+}
