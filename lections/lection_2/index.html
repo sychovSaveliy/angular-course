@@ -7,11 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="../../vendor/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.6.6/angular-messages.js"></script>
+
     <script src="./app/app.js"></script>
     <link rel="stylesheet" href="./css/main.css">
+
+
 </head>
 <body>
     <div class="wrapper" ng-controller="firstCtrl">
+        <h2>Forms</h2>
         <!-- if required, then save change value in scope -->
         <!-- novalidate directive - off html validation -->
         <div class="block">
@@ -23,6 +28,69 @@
                 <input type="button" ng-click="reset()" value="Reset" />
                 <input type="submit" ng-click="update(user)" value="Save" />
             </form>
+        </div>
+
+        <!--
+            $valid – true/false – валидности введенных данных относительно заданных правил
+            $invalid – false/true – обратный к $valid
+            $pristine – true, если форма/элемент еще не использовались
+            $dirty – обратные к $pristine
+            $touched – на элементе произошло событие blur
+            $error – объект ошибки
+            $isEmpty(value) – вспомогательный метод, который проверяет является ли значение undefined, ”, null или NaN
+            $validate() – true/false – запускает все валидаторы зарегистрированные на модели
+            $setValidity(validationErrorKey, isValid) – задание значения валидности для одного из критериев
+            $setPristine()/$setDirty() – сеттеры для $pristine/$dirty
+            $setUntouched()/$setTouched() – сеттеры для $touched
+        -->
+        <div class="block">
+            <form name="login">
+                <label>Name: <input name="username" ng-model="username" type="text" required></label>
+                <br />
+                <label>Password:<input name="password" ng-model="password" pattern="\d+" value=""></label>
+
+                <table border="1">
+                    <tr>
+                        <td>login.username</td>
+                        <td>{{ login.username }}</td>
+                        <td>{{ username }}</td>
+                    </tr>
+                    <tr>
+                        <td>login.password</td>
+                        <td>{{ login.password }}</td>
+                        <td>{{ password }}</td>
+                    </tr>
+                    <tr>
+                        <td>login.$valid</td>
+                        <td>{{ login.$valid }}</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <!--
+            important!
+
+            все валидируемые елементы должны содержать директиву ng-model,
+            именно благодаря ней мы имеем доступ к ngModelController если у вас в scope свойство,
+            которая не соответствует критериям, – оно выведено не будет.
+        -->
+
+        <div class="row"></div>
+
+        <h2>Services</h2>
+        <div class="block">
+            <h3>.service()</h3>
+
+            <button ng-click="serviceOne();">service_1</button>
+            <br />
+            <br />
+            <button ng-click="serviceTwo();">service_2</button>
+        </div>
+        <div class="block">
+            <h3>.factory()</h3>
+
+            <button ng-click="factoryOne();">factory_1</button>
         </div>
     </div>
 </body>
