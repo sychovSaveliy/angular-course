@@ -10,7 +10,11 @@
     <script src="./app/app.js"></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
+<body ng-controller="firstCtrl">
+    <button ng-click="doIt()" ng-if="showBtn">
+        BroadCast It
+    </button>
+
     <div class="block">
         <h2>
             $emit, $on, $broadcast

@@ -2,7 +2,7 @@
 
 ## Description
 
-description
+EventEmitter - $emit, $on, $broadcast
 
 ## Basics
 
