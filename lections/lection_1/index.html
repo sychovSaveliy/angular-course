@@ -63,9 +63,9 @@
         <div class="block">
             ng-repeat
             <ul>
-                <li ng-repeat="item in model.friends">
-                    {{ item }}
-                </li>
+                <!--<li ng-repeat="item in model.friends">-->
+                    <!--{{ item }}-->
+                <!--</li>-->
             </ul>
             <hr />
             <h3>
@@ -73,7 +73,7 @@
             </h3>
             <ul>
                 <li ng-repeat="item in model.friends track by $index">
-                    {{ item }}
+                    {{ $index + ' _ ' + item }}
                 </li>
             </ul>
         </div>

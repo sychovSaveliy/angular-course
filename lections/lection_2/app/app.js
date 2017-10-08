@@ -5,7 +5,7 @@ var model = {
     email: null
 };
 
-myApp.controller("firstCtrl", function ($scope, $service_1, $service_2, $factory_1, $someValues, someDigit, someConst, myProv_1, myProv_2) {
+myApp.controller("firstCtrl", function ($scope, $service_1, $service_2, $factory_1, $someValues, someDigit, someConst, myProv_1) {
 
     $scope.reset = function() {
         $scope.user = angular.copy(model);
