@@ -7,23 +7,23 @@ var model = {
         'Petya',
         'Katya',
         'Dusya',
-        // 'Dusya',
-        // 'Dusya'
+        'Dusya',
+        'Dusya'
     ]
 };
 
 myApp.controller("firstCtrl", function ($scope) {
     $scope.message = 'Hello';
 
-    $scope.model = model;
-    // $scope.model = angular.copy(model);
+    // $scope.model = model;
+    $scope.model = angular.copy(model);
 
 
     $scope.handlerInScope = function() {
         console.log('Clicked');
 
-        $scope.model = model;
-        // $scope.model = angular.copy(model);
+        // $scope.model = model;
+        $scope.model = angular.copy(model);
         console.log($scope.model,  model);
     };
 
