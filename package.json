@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "node-static": "^0.7.9",
-    "angular-route": "^1.6.6"
+    "angular-route": "^1.6.6",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
   },
   "author": "",
   "license": "ISC"
