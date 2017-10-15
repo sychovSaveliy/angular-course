@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header" ng-controller="topCtrl">
+        {{ text }}
+    </div>
+    <div class="content" ng-controller="contentCtrl">
+        <div class="header"></div>
+        <div class="blocks_wrapper">
+            <div class="block" ng-controller="formCtrl"></div>
+            <div class="block" ng-controller="validateCtrl"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="./../../vendor/angular.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controllers/top.controller.js"></script>
+<script src="app/controllers/content.controller.js"></script>
+<script src="app/controllers/form.controller.js"></script>
+<script src="app/controllers/validate.controller.js"></script>
+</body>
+</html>
