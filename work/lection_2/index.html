@@ -13,10 +13,26 @@
         {{ text }}
     </div>
     <div class="content" ng-controller="contentCtrl">
-        <div class="header"></div>
+        <div class="header">
+            {{ form }}
+        </div>
         <div class="blocks_wrapper">
-            <div class="block" ng-controller="formCtrl"></div>
-            <div class="block" ng-controller="validateCtrl"></div>
+            <div class="block" ng-controller="formCtrl">
+
+                <form name="form">
+                    <input type="text" ng-change="ChangeHandler()" ng-model="form.text" required>
+                    <input type="number" ng-change="ChangeHandler()" ng-model="form.number" required>
+                </form>
+
+                <button ng-if="form.$valid">Save</button>
+            </div>
+            <div class="block" ng-controller="validateCtrl">
+
+                {{ first }}
+                <hr>
+                {{ second }}
+                <button ng-click="show()">click</button>
+            </div>
         </div>
     </div>
 </div>
@@ -30,5 +46,7 @@
 <script src="app/controllers/content.controller.js"></script>
 <script src="app/controllers/form.controller.js"></script>
 <script src="app/controllers/validate.controller.js"></script>
+
+<script src="app/services/form.service.js"></script>
 </body>
 </html>
