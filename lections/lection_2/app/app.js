@@ -1,12 +1,13 @@
 var myApp = angular.module('myApp', []);
 var model = {
-    name: null,
+    name: 'hello',
     gender: null,
     email: null
 };
 
-myApp.controller("firstCtrl", function ($scope, $service_1, $service_2, $factory_1, $someValues, someDigit, someConst, myProv_1) {
-
+myApp.controller("firstCtrl", function ($scope, $service_1, $service_2,
+                                        $factory_1, $someValues, someDigit,
+                                        someConst, myProv_1, $timeout) {
     $scope.reset = function() {
         $scope.user = angular.copy(model);
     };
@@ -18,8 +19,15 @@ myApp.controller("firstCtrl", function ($scope, $service_1, $service_2, $factory
     };
 
     $scope.reset();
+    // $scope.$apply();
 
+    // $timeout(function () {
+    //     $scope.user.name = 'aslkkndlkasdkl'
+    // }, 2000);
 
+    $timeout(function () {
+        $scope.user.name = 500;
+    }, 2000);
 
 
 
@@ -114,6 +122,9 @@ myApp.constant('someConst', {
 });
 
 myApp.provider('myProv_1', function() {
+
+    console.log('ss');
+    // alert();
     return {
         $get: function() {
             var thisIsPrivate = "Private";

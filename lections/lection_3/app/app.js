@@ -5,7 +5,7 @@ myApp.controller("firstCtrl", function ($scope, $timeout) {
     $scope.showBtn = false;
 
     $scope.$on('dataFromInput', function(event, data) {
-        console.log('MainCTRL', event, data);
+        console.log('firstCtrl', event, data);
         $scope.showBtn = true;
     });
     

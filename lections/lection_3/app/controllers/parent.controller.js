@@ -4,7 +4,8 @@ myApp.controller("parentCtrl", function ($scope) {
 
     $scope.$on('dataFromInput', function(event, data) {
         $scope.emptyValue = data;
-
+        console.log('parentCtrl', data);
+        // console.log(event);
         // event.stopPropagation();
     });
 });

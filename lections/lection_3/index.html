@@ -20,7 +20,10 @@
             $emit, $on, $broadcast
         </h2>
 
-        <div class="element" ng-controller="parentCtrl" ng-mouseover="hoverStatus = true" ng-mouseout="hoverStatus = false">
+        <div class="element"
+             ng-controller="parentCtrl"
+             ng-mouseover="hoverStatus = true"
+             ng-mouseout="hoverStatus = false">
             {{ title }}
             <br />
             Value: {{ emptyValue }}
@@ -28,7 +31,10 @@
             <span ng-show="hoverStatus">hover</span>
 
 
-            <div class="element" ng-controller="childCtrl" ng-mouseover="hoverStatus = true" ng-mouseout="hoverStatus = false">
+            <div class="element"
+                 ng-controller="childCtrl"
+                 ng-mouseover="hoverStatus = true"
+                 ng-mouseout="hoverStatus = false">
                 {{ title }}
                 <hr />
                 <span ng-show="hoverStatus">hover</span>
