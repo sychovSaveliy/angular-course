@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header" ng-controller="topCtrl">
+        {{ text }}
+    </div>
+    <div class="content" ng-controller="contentCtrl">
+        <div class="header">
+            {{ form }}
+        </div>
+        <div class="blocks_wrapper">
+            <div class="block" ng-controller="formCtrl">
+
+                <form name="form">
+                    <input type="text" ng-change="ChangeHandler()" ng-model="form.text" required>
+                    <input type="number" ng-change="ChangeHandler()" ng-model="form.number" required>
+                </form>
+
+                <button ng-if="form.$valid">Save</button>
+            </div>
+            <div class="block" ng-controller="validateCtrl">
+
+                {{ first }}
+                <hr>
+                {{ second }}
+                <button ng-click="show()">click</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="./../../vendor/angular.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controllers/top.controller.js"></script>
+<script src="app/controllers/content.controller.js"></script>
+<script src="app/controllers/form.controller.js"></script>
+<script src="app/controllers/validate.controller.js"></script>
+
+<script src="app/services/form.service.js"></script>
+</body>
+</html>

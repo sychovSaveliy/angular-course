@@ -36,6 +36,8 @@ myApp.controller("firstCtrl", function ($scope, $service_1, $service_2,
     $scope.serviceOne = function() {
         console.log($service_1);
 
+        $service_1.public = 400;
+
         var res = $service_1.publicMethod(50);
 
         console.log(res);
@@ -122,7 +124,6 @@ myApp.constant('someConst', {
 });
 
 myApp.provider('myProv_1', function() {
-
     console.log('ss');
     // alert();
     return {
