@@ -1,3 +1,3 @@
-app.controller('l-flow', function($scope) {
+app.controller('l-flow', function($scope, $state) {
     $scope.flow = {};
 });

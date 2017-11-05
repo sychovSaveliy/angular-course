@@ -6,15 +6,14 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
         .state('flow', {
             url: "/flow",
-            templateUrl: "app/src/page-blocks/layouts/l-flow/l-flow.html"
-        })
-        .state('flow.blockList', {
-            url: "/list",
-            templateUrl: "app/src/page-blocks/flow/flow.block-list.html",
-            controller: 'l-flow.block-list'
-        })
-        .state('menu', {
-            url: "/menu",
-            templateUrl: "app/src/page-blocks/layouts/l-menu/l-menu.html"
+            views: {
+                "menu": {
+                    templateUrl: "app/src/page-blocks/layouts/l-menu/l-menu.html"
+                },
+                "blockList": {
+                    templateUrl: "app/src/page-blocks/layouts/l-block-list/l-block-list.html",
+                    controller: 'l-flow.block-list'
+                }
+            }
         })
 });
