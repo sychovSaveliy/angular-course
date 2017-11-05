@@ -8,7 +8,8 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             url: "/flow",
             views: {
                 "menu": {
-                    templateUrl: "app/src/page-blocks/layouts/l-menu/l-menu.html"
+                    templateUrl: "app/src/page-blocks/layouts/l-menu/l-menu.html",
+                    controller: 'l-flow.menu'
                 },
                 "blockList": {
                     templateUrl: "app/src/page-blocks/layouts/l-block-list/l-block-list.html",

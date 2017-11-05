@@ -1,3 +1,5 @@
 app.controller('l-flow', function($scope, $state) {
-    $scope.flow = {};
+    $scope.flow = {
+        name: "flow"
+    };
 });

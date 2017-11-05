@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+.flow {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.flow__menu {
+    width: 200px;
+    height: 100%;
+}
+
+.flow__block-list {
+    height: 100%;
+    width: calc(100% - 200px);
+}
