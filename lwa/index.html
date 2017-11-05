@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="lwa-app">
 <head>
     <meta charset="UTF-8">
+    <base href="/">
     <title>Title</title>
+    <script src="vendor/bundle.js"></script>
+    <script src="bin/main.js"></script>
 </head>
 <body>
+    <a ui-sref="flow">flow</a>
+    <a ui-sref="menu">menu</a>
 
+    <div ui-view></div>
 </body>
 </html>
