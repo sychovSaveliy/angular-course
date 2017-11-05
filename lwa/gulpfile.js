@@ -1,16 +1,29 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
+var paths = {
+    bundles: {
+        js: [
+            './node_modules/angular/angular.js',
+            './node_modules/angular-ui-router/release/angular-ui-router.js'
+        ]
+    },
+    js: [
+        './app/js/**/*.js',
+        './app/src/**/*.js'
+    ],
+    css: {}
+};
 
 
 gulp.task('js', function() {
-    return gulp.src(['./app/js/**/*.js', './app/src/**/*.js'])
+    return gulp.src(paths.js)
         .pipe(concat('main.js'))
         .pipe(gulp.dest('./bin/'));
 });
 
 gulp.task('watch', function () {
     gulp.start('compile');
-    gulp.watch(['./app/js/**/*.js', './app/src/**/*.js'], ['js']);
+    gulp.watch(paths.js, ['js']);
 });
 
 gulp.task('compile', function () {
@@ -22,10 +35,7 @@ gulp.task('compile', function () {
 });
 
 gulp.task('bundle:js', function() {
-    return gulp.src([
-            './node_modules/angular/angular.js',
-             './node_modules/angular-ui-router/release/angular-ui-router.js'
-        ])
+    return gulp.src(paths.bundles.js)
         .pipe(concat('bundle.js'))
         .pipe(gulp.dest('./vendor/'));
 });
