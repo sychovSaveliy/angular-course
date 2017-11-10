@@ -1,8 +1,6 @@
 app.controller('l-flow.menu', function($scope) {
     $scope.flow = $scope.flow || {};
 
-
-    console.log($scope.flow);
     $scope.flow.menu = {
         list: [
             {
