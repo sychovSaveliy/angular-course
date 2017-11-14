@@ -44,15 +44,14 @@ function getCourses(req, res) {
 }
 
 function queryParamsHandler(response) {
-    return new Promise(function(resolve, reject){
+    return 
         getCollectionsMetadata()
         .then((resp) => {
             response.inject = response.inject || {};
             response.inject.metadata = resp;
 
-            resolve(response);
+            return response;
         })
-    });
 }
 
 function onError(error) {
