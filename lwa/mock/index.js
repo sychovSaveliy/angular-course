@@ -3,6 +3,7 @@ let app = express();
 let bodyParser = require('body-parser');
 let port = 5000;
 let $data = require('./routes/data');
+$data.collections = require('./routes/services/collections');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,7 +33,7 @@ app.route('/menu')
     .get($data.getMenu);
 
 app.route('/collections/courses')
-    .get($data.getCourses);
+    .get($data.collections.getCourses);
 
 app.listen(port);
 console.log("Mock server listening on port " + port);
