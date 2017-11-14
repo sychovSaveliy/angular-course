@@ -31,6 +31,8 @@ app.route('/postTest')
 app.route('/menu')
     .get($data.getMenu);
 
+app.route('/collections/courses')
+    .get($data.getCourses);
 
 app.listen(port);
 console.log("Mock server listening on port " + port);

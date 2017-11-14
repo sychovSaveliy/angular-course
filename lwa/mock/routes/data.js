@@ -59,13 +59,60 @@ function getMenu(req, res) {
                 console.log("GET - ERROR", path, error);
             })
         .then((response) => {
-                res.json(response);
+            res.json(response);
         });
+}
+
+function getCollectionsMetadata(req, res) {
+    var path = './api/collections/metadata/get.json';
+    var servicePromise = filereader(fs, path);
+
+    return servicePromise
+        .then((response) => {
+            console.log("GET", path);
+            return response;
+        }, onError);
+}
+
+function getCourses(req, res) {
+    var path = './api/collections/courses/get.json';
+    var servicePromise = filereader(fs, path);
+    var onAction = (response) => { return response };
+    
+    if (req.query.type && req.query.type === 'metadata') {
+        onAction = queryParamsHandler;
+    }
+
+    servicePromise
+        .then((response) => {
+            console.log("GET", path);
+
+            return response;
+        }, onError)
+        .then(onAction)
+        .then((response) => {
+            res.json(response);
+        });
+}
+
+function queryParamsHandler(response) {
+    return new Promise(function(resolve, reject){
+        getCollectionsMetadata()
+        .then((resp) => {
+            response.inject = response.inject || {};
+            response.inject.metadata = resp;
+
+            resolve(response);
+        })
+    });
+}
+
+function onError(error) {
+    console.error(error);
 }
 
 
 
 
 
-
-module.exports = { testGetRequest, testPostRequest, getMenu };
+module.exports = { testGetRequest, testPostRequest, getMenu, getCourses };
