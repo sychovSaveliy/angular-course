@@ -1,19 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 html, body {
     height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 .flow {
     display: flex;
     flex-direction: row;
     height: 100%;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
 .flow__menu {
-    width: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
     height: 100%;
 }
 

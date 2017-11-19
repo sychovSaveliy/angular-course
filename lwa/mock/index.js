@@ -32,6 +32,9 @@ app.route('/postTest')
 app.route('/menu')
     .get($data.getMenu);
 
+app.route('/firtspage')
+    .get($data.getHomeText);
+
 app.route('/collections/courses')
     .get($data.collections.getCourses);
 

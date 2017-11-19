@@ -63,6 +63,22 @@ function getMenu(req, res) {
         });
 }
 
+function getHomeText(req, res) {
+    var path = './api/homePage/get.json';
+    var servicePromise = filereader(fs, path);
+
+    servicePromise
+        .then((response) => {
+        console.log("GET", path);
+        return response;
+    }, (error) => {
+        console.log("GET - ERROR", path, error);
+    })
+        .then((response) => {
+        res.json(response);
+    });
+}
+
 function onError(error) {
     console.error(error);
 }
@@ -71,4 +87,4 @@ function onError(error) {
 
 
 
-module.exports = { testGetRequest, testPostRequest, getMenu };
+module.exports = { testGetRequest, testPostRequest, getMenu, getHomeText };
