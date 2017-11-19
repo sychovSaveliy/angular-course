@@ -66,3 +66,10 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     
 
     });
+
+
+//
+//git status
+//git add ./
+//git commit -m "description"
+//git push origin miwka

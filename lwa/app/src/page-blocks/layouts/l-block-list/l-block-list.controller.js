@@ -16,7 +16,6 @@ app.controller('l-flow.block-list', function($scope, $http, $state) {
             url: 'http://localhost:5000/collections/courses'
         })
             .then(function success(response) {
-//            console.log (response);
             $scope.flow.blockList.list = response.data.data.list;
         });
     }
