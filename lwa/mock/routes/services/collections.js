@@ -14,7 +14,7 @@ function filereader(fsRef, path) {
 function getCollectionsMetadata(req, res) {
     var path = './api/collections/metadata/get.json';
     var servicePromise = filereader(fs, path);
-
+    console.log(path);
     return servicePromise
         .then((response) => {
             console.log("GET", path);
@@ -26,7 +26,7 @@ function getCourses(req, res) {
     var path = './api/collections/courses/get.json';
     var servicePromise = filereader(fs, path);
     var onAction = (response) => { return response };
-    
+
     if (req.query.type && req.query.type === 'metadata') {
         onAction = queryParamsHandler;
     }
@@ -44,14 +44,24 @@ function getCourses(req, res) {
 }
 
 function queryParamsHandler(response) {
+
     return 
+
+    return new Promise(function(resolve, reject) {
+
         getCollectionsMetadata()
-        .then((resp) => {
-            response.inject = response.inject || {};
-            response.inject.metadata = resp;
+            .then((resp) => {
+                response.inject = response.inject || {};
+                response.inject.metadata = resp;
+
 
             return response;
         })
+
+                resolve(response);
+            })
+    });
+
 }
 
 function onError(error) {
