@@ -12,27 +12,30 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                     templateUrl: 'app/src/page-blocks/layouts/l-menu/l-menu.html',
                     controller: 'l-flow.menu'
                 },
-                'blockList@flow': {
-                    templateUrl: 'app/src/page-blocks/layouts/l-block-list/l-block-list.html',
-                    controller: 'l-flow.block-list'
+                'courses@flow': {
+                    templateUrl: 'app/src/page-blocks/layouts/l-courses/l-courses.html',
+                    controller: 'l-flow.courses'
                 }
+            },
+            params: {
+                data: {}
             }
         })
-        .state('flow2', {
-            url: '/flow2',
+        .state('course', {
+            url: '/course',
             views: {
                 '': { templateUrl: 'app/src/page-blocks/layouts/l-flow/l-flow.html' },
-                'blockList@flow2': {
+                'menu@course': {
                     templateUrl: 'app/src/page-blocks/layouts/l-menu/l-menu.html',
                     controller: 'l-flow.menu'
                 },
-                'menu@flow2': {
-                    templateUrl: 'app/src/page-blocks/layouts/l-block-list/l-block-list.html',
-                    controller: 'l-flow.block-list'
+                'courses@course': {
+                    templateUrl: 'app/src/page-blocks/layouts/l-courses/l-one.course.html',
+                    controller: 'l-flow.oneCourse'
                 }
+            },
+            params: {
+                data: {}
             }
         })
-
-
-
 });

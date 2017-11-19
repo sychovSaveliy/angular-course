@@ -5,7 +5,8 @@
                 "id": 1,
                 "type": "course",
                 "title": "Javascript Essential",
-                "description": "Курс для начинающий ...",
+                "shortlist": "Курс для начинающих хакеров",
+                "description": "To minimize creation of DOM elements, ngRepeat uses a function to \"keep track\" of all items in the collection and their corresponding DOM elements. For example, if an item is added to the collection, ngRepeat will know that all other items already have DOM elements, and will not re-render them. The default tracking function (which tracks items by their identity) does not allow duplicate items in arrays. This is because when there are duplicates, it is not possible to maintain a one-to-one mapping between collection items and DOM elements. If you do need to repeat duplicate items, you can substitute the default tracking behavior with your own using the track by expression.For example, you may track items by the index of each item in the collection, using the special scope property",
                 "keywords": "",
                 "links": {
                     "google": "",
@@ -16,7 +17,20 @@
                 "id": 2,
                 "type": "course",
                 "title": "Javascript Advanced",
-                "description": "Курс для продвинутых ...",
+                "shortlist": "Курс для уже пойманых хакеров",
+                "description": "If you are working with objects that have a unique identifier property, you should track by this identifier instead of the object instance. Should you reload your data later, ngRepeat will not have to rebuild the DOM elements for items it has already rendered, even if the JavaScript objects in the collection have been substituted for new ones. For large collections, this significantly improves rendering performance. If you don't have a unique identifier, track by $index can also provide a performance boost.",
+                "keywords": "",
+                "links": {
+                    "google": "",
+                    "docs": ""
+                }
+            },
+            {
+                "id": 3,
+                "type": "course",
+                "title": "AngularJS",
+                "shortlist": "Курс для порядочных людей",
+                "description": "The ngClass directive allows you to dynamically set CSS classes on an HTML element by databinding an expression that represents all classes to be added. If you don't have a unique identifier, track by $index can also provide a performance boost.",
                 "keywords": "",
                 "links": {
                     "google": "",

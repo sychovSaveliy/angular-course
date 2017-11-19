@@ -1,0 +1,12 @@
+<div>
+    <h2>
+        Courses
+    </h2>
+    <h2 ng-repeat-start="item in courses"></h2>
+    {{ item.title}}
+    <button ng-click="goToCourse({ id: item.id })">go to course</button>
+    <p ng-repeat-end class="p">
+        {{ item.shortlist }}
+    </p>
+
+</div>
