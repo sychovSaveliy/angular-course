@@ -45,6 +45,24 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                 controller: 'l-flow.contacts'
             }
         }
+        })
+        .state('Description', {
+        url: '/Description',
+        views: {
+            '': { templateUrl: 'app/src/page-blocks/layouts/l-flow/l-flow.html' },
+            'menu@Description': {
+                templateUrl: 'app/src/page-blocks/layouts/l-menu/l-menu.html',
+                controller: 'l-flow.menu'
+            },
+            'board@Description': {
+                templateUrl: 'app/src/page-blocks/layouts/l-description/l-description.html',
+                controller: 'l-flow.description'
+            }
+        },
+        params: {
+            data: {}
+        }
     })
+    
 
     });

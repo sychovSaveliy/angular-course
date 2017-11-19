@@ -3,7 +3,7 @@ html, body {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .flow {
     display: flex;
@@ -16,11 +16,24 @@ html, body {
 .flow__menu {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    min-width: 100px;
+    max-width: 100px;
     height: 100%;
 }
 
-.flow__block-list {
-    height: 100%;
-    width: calc(100% - 200px);
+.flow__board {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.flow__course-div {
+    min-height: 180px;
+    max-height: 180px;
+    min-width: 280px;
+    max-width: 280px;
+    border: solid black 1px;
+        
 }

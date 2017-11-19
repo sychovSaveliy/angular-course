@@ -22,6 +22,27 @@
                     "google": "",
                     "docs": ""
                 }
+            },
+            {
+                "id": 3,
+                "type": "course",
+                "title": "Javascript Advanced",
+                "description": "Курс для продвинутых ...",
+                "keywords": "",
+                "links": {
+                    "google": "",
+                    "docs": ""
+                }
+            },{
+                "id": 4,
+                "type": "course",
+                "title": "Javascript Advanced",
+                "description": "Курс для продвинутых ...",
+                "keywords": "",
+                "links": {
+                    "google": "",
+                    "docs": ""
+                }
             }
         ]
     },

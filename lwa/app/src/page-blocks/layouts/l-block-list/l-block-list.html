@@ -1,8 +1,4 @@
-<div>
-    <h3>
-        Block List
-    </h3>
-    <p>
-        {{ flow.blockList.title }}
-    </p>
+<div class="flow__course-div" ng-repeat="item in flow.blockList.list"
+   ng-click="goTo({ id: item.id })">
+    {{ item.title }}
 </div>
