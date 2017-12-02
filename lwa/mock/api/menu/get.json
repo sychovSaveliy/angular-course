@@ -1,17 +1,20 @@
 {
   "list": [
     {
-      "title": "Home",
+      "title": "Главная",
+      "id": "Home",
       "desc": "",
       "icon": ""
     },
     {
-      "title": "Vids",
+      "title": "Рецепты",
+      "id": "Vids",
       "desc": "",
       "icon": ""
     },
     {
-      "title": "Contacts",
+      "title": "О нас",
+      "id": "Contacts",
       "desc": "",
       "icon": ""
     }
