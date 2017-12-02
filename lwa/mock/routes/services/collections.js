@@ -43,6 +43,8 @@ function getCourses(req, res) {
         });
 }
 
+
+
 function queryParamsHandler(response) {
     return 
         getCollectionsMetadata()

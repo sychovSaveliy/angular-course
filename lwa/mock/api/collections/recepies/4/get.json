@@ -1,0 +1,54 @@
+{
+    "head": {
+        "id": 1,
+        "type": "recepie",
+        "title": "Название блюда",
+        "description": "Вкусная еда выглядит как на фотке, готовиться так вот как внизу.",
+        "photo": "",
+        "komponents": [
+            {
+                "ingridient":"",
+                "quantity":""
+            },
+            {
+                "ingridient":"",
+                "quantity":""
+            },
+            {
+                "ingridient":"",
+                "quantity":""
+            },
+            {
+                "ingridient":"",
+                "quantity":""
+            }
+        ]
+    },
+    "steps": [
+        {
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "photo": ""
+        },
+        {
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "photo": ""
+        },
+        {
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "photo": ""
+        },
+        {
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "photo": ""
+        },
+        {
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "photo": ""
+        }        
+    ]
+}

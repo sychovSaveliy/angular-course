@@ -33,7 +33,8 @@
                     "google": "",
                     "docs": ""
                 }
-            },{
+            },
+            {
                 "id": 4,
                 "type": "course",
                 "title": "Javascript Advanced",

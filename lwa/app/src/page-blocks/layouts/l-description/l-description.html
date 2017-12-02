@@ -1,9 +1,21 @@
 <div>
-    <h2>
-        {{flow.description.title}}
-    </h2>
-    <p>
-        {{flow.description.text}}
-    </p>
+    <div>
+        <h3>
+            {{flow.description.globalObject.head.title}}
+        </h3>
+        <p>
+            {{flow.description.globalObject.head.description}}
+        </p>
+
+        <ul>
+            <li ng-repeat="item in flow.description.globalObject.head.komponents">{{item.ingridient}} : {{item.quantity}}</li>
+        </ul>
+    </div>
+    <div class="" ng-repeat="item in flow.description.globalObject.steps">
+        <hr>
+        <h3>{{item.title}}</h3>
+        <span>{{ item.description }}</span> 
+    </div>
+    
     <button ui-sref="Vids">BACK</button>
 </div>
