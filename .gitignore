@@ -12,6 +12,7 @@ pids
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
+lwa/vendor
 
 # Dependency directory
 # Commenting this out is preferred by some people, see

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../vendor/angular.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./directives/directive_element.js"></script>
+    <script src="./directives/directive_isolated_scope.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="wrapper" ng-controller="firstCtrl">
+        <div class="block">
+            {{ message }}
+
+            <!--<image-block data-name="google"></image-block>-->
+            <!--<div image-block=""></div>-->
+        </div>
+        <div class="row"></div>
+
+        <div class="block">
+            Isolated {{ value }}
+            <div isolated-scope=""
+                 data-value1="text"
+                 data-value2="value"
+                 data-value3="2 + 7"
+                 another-attr-name="{ name: 'Vasya', age: '20' }"
+            ></div>
+
+            <!--data-value3="doIt"-->
+        </div>
+    </div>
+</body>
+</html>

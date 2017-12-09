@@ -39,3 +39,12 @@
 .css-form input.ng-valid.ng-touched {
     background-color: #78FA89;
 }
+
+table {
+    border: 1px solid #a61717;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+}
