@@ -25,19 +25,13 @@ function getCollectionsMetadata(req, res) {
 function getCourses(req, res) {
     var path = './api/collections/courses/get.json';
     var servicePromise = filereader(fs, path);
-    var onAction = (response) => { return response };
-    
-    if (req.query.type && req.query.type === 'metadata') {
-        onAction = queryParamsHandler;
-    }
-
-    servicePromise
+       
+        servicePromise
         .then((response) => {
             console.log("GET", path);
 
             return response;
         }, onError)
-        .then(onAction)
         .then((response) => {
             res.json(response);
         });

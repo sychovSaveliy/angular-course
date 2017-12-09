@@ -1,4 +1,7 @@
-<div class="flow__course-div" ng-repeat="item in flow.blockList.list"
-   ng-click="goTo({ id: item.id })">
-    {{ item.title }}
+<div class="flow__course-div" ng-repeat="item in flow.blockList.list">
+   <img class="flow__course-div_img" ng-src="/app/img/recepies/{{item.id}}/top.jpg" alt="img" ng-click="goTo({ id: item.id })">
+   
+   <img ng-click="addFav( item.id )" src="/app/img/fav_icon/add.png" alt="favourite" class="favourite__img">
+   
+   <p>{{ item.title }}</p>
 </div>

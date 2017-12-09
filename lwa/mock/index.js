@@ -38,14 +38,8 @@ app.route('/firtspage')
 app.route('/collections/courses')
     .get($data.collections.getCourses);
 
-app.route('/rec1')
-    .get($data.getRec1);
-app.route('/rec2')
-    .get($data.getRec1);
-app.route('/rec3')
-    .get($data.getRec1);
-app.route('/rec4')
-    .get($data.getRec1);
+app.route('/rec/:id')
+    .get($data.getRec);
 
 app.listen(port);
 console.log("Mock server listening on port " + port);

@@ -1,0 +1,6 @@
+<div class="flow__favourite">
+    <div ng-repeat="item in flow.favourites.list" ng-show="toShow(item.id)" ng-click="goTo({ id: item.id })">
+        <img ng-src="/app/img/recepies/{{item.id}}/top.jpg" alt="Eda">
+        <h3>{{item.title}}</h3>
+    </div>
+</div>

@@ -44,7 +44,7 @@ h3 {
 .flow__menu {
     display: flex;
     flex-direction: column;
-    min-width: 150px;
+    min-width: 200px;
     max-width: 200px;
     height: 100%;
     color: #888;
@@ -60,6 +60,7 @@ h3 {
 
 .menu_button span {
     margin: 5px;
+    margin-left: 20px;
 }
 
 .menu_button:hover {
@@ -74,13 +75,81 @@ h3 {
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 5px;
+    margin-right: 10px;
 }
 
 .flow__course-div {
-    min-height: 180px;
+    min-height: 280px;
+    max-height: 280px;
+    min-width: 300px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px;
+}
+
+.flow__course-div_img {
+    min-height: 230px;
+    max-height: 230px;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.favourite__img {
+    position: relative;
+    max-width: 50px;
+    max-height: 50px;
+    bottom: 5px;
+    left: 250px;
+}
+
+.flow__course-div p {
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    margin-right: 50px;
+    position: relative;
+    bottom: 60px;
+}
+
+.flow__course-div:hover {
+    color: #ed786a;
+    background-color: #ddd;
+}
+
+.flow__description-head {
+    width: 100%;
+}
+
+.flow__description-head ul {
+   float: left;
+}
+
+.flow__description-head img {
+    float: left;
     max-height: 180px;
-    min-width: 280px;
-    max-width: 280px;
-    border: solid black 1px;
-    margin: 2px;
+    max-width: 240px;
+    margin-right: 10px;
+}
+
+.flow__description-body img {
+    float: left;
+    max-height: 92px;
+    max-width: 120px;
+    margin: 10px;
+}
+
+.flow__favourite {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 600px;
+}
+
+.flow__favourite img {
+    float: left;
+    max-height: 100px;
+    max-width: 140px;
+    min-height: 100px;
+    min-width: 140px;
+    margin: 10px;
 }

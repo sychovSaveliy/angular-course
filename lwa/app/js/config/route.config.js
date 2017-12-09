@@ -46,6 +46,20 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             }
         }
         })
+        .state('Favourites', {
+        url: '/Favourites',
+        views: {
+            '': { templateUrl: 'app/src/page-blocks/layouts/l-flow/l-flow.html' },
+            'menu@Favourites': {
+                templateUrl: 'app/src/page-blocks/layouts/l-menu/l-menu.html',
+                controller: 'l-flow.menu'
+            },
+            'board@Favourites': {
+                templateUrl: 'app/src/page-blocks/layouts/l-favourites/l-favourites.html',
+                controller: 'l-flow.favourites'
+            }
+        }
+        })
         .state('Description', {
         url: '/Description',
         views: {

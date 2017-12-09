@@ -3,7 +3,7 @@
         "type": "recepie",
         "title": "Самый яблочный пирог",
         "description": "Это, пожалуй, самый яблочный пирог, который я ела. Вкус у него потрясающий, настоящий – яблочный! Текстура сочная, нежная и ароматная. Рецепт совершенно простой, из доступных ингредиентов. Советую приготовить и оценить!",
-        "img": "/app/img/recepies/4/top.jpg",
+        "img": "/app/img/recepies/5/top.jpg",
         "komponents": [
             {
                 "ingridient":"Яблоки ",
@@ -41,29 +41,29 @@
     },
     "steps": [
         {
-            "title": "Начинаем готовить",
-            "description": "Как приготовить яблочный пирог: Взбиваем яйца с сахаром (150 г), вливаем молоко.",
-            "img": "/app/img/recepies/4/inner/1.jpg"
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "img": "/app/img/recepies/5/inner/1.jpg"
         },
         {
-            "title": "Готовим массу",
-            "description": "Смешиваем с просеянной мукой, разрыхлителем и корицей. Добавляем тонко нарезанные пластинками, очищенные яблоки.",
-            "img": "/app/img/recepies/4/inner/2.jpg"
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "img": "/app/img/recepies/5/inner/2.jpg"
         },
         {
-            "title": "Выкладываем на протвень",
-            "description": " Выкладываем в хорошо смазанную форму, сверху на тесто кусочки масла и сахар (50 г).",
-            "img": "/app/img/recepies/4/inner/3.jpg"
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "img": "/app/img/recepies/5/inner/3.jpg"
         },
         {
-            "title": "Запекаем",
-            "description": " Печем яблочный пирог при 180 градусах, 50-60 минут.",
-            "img": "/app/img/recepies/4/inner/4.jpg"
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "img": "/app/img/recepies/5/inner/4.jpg"
         },
         {
-            "title": "Готово",
-            "description": "Яблочный пирог готов. Приятного аппетита!",
-            "img": "/app/img/recepies/4/inner/5.jpg"
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "img": "/app/img/recepies/5/inner/5.jpg"
         }        
     ]
 }

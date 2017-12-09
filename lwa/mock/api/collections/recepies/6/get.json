@@ -1,0 +1,53 @@
+{
+    "head": {
+        "type": "recepie",
+        "title": "",
+        "description": "",
+        "img": "/app/img/recepies/6/top.jpg",
+        "komponents": [
+            {
+                "ingridient":"",
+                "quantity":""
+            },
+            {
+                "ingridient":"",
+                "quantity":""
+            },
+            {
+                "ingridient":"",
+                "quantity":""
+            },
+            {
+                "ingridient":"",
+                "quantity":""
+            }
+        ]
+    },
+    "steps": [
+        {
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "img": "/app/img/recepies/6/inner/1.jpg"
+        },
+        {
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "img": "/app/img/recepies/6/inner/2.jpg"
+        },
+        {
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "img": "/app/img/recepies/6/inner/3.jpg"
+        },
+        {
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "img": "/app/img/recepies/6/inner/4.jpg"
+        },
+        {
+            "title": "Чё делаем",
+            "description": "Подробно прямо че делаем",
+            "img": "/app/img/recepies/6/inner/5.jpg"
+        }        
+    ]
+}

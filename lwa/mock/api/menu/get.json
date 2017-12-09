@@ -13,6 +13,12 @@
       "icon": ""
     },
     {
+      "title": "Любимое",
+      "id": "Favourites",
+      "desc": "",
+      "icon": ""
+    },
+    {
       "title": "О нас",
       "id": "Contacts",
       "desc": "",

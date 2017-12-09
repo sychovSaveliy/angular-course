@@ -1,21 +1,25 @@
 <div>
-    <div>
+    <div class="flow__description-head">
+        <img ng-src="{{flow.description.globalObject.head.img}}" alt="Eda">
         <h3>
             {{flow.description.globalObject.head.title}}
         </h3>
         <p>
             {{flow.description.globalObject.head.description}}
         </p>
-
-        <ul>
-            <li ng-repeat="item in flow.description.globalObject.head.komponents">{{item.ingridient}} : {{item.quantity}}</li>
-        </ul>
+        <div>
+            <ul>
+                <li ng-repeat="item in flow.description.globalObject.head.komponents">{{item.ingridient}} : {{item.quantity}}</li>
+            </ul>
+        </div>
+        
     </div>
-    <div class="" ng-repeat="item in flow.description.globalObject.steps">
-        <hr>
+    <div class="flow__description-body" ng-repeat="item in flow.description.globalObject.steps">
+        <hr style="clear: both">
+        <img ng-src="{{item.img}}" alt="Eda">
         <h3>{{item.title}}</h3>
         <span>{{ item.description }}</span> 
     </div>
-    
+    <hr style="clear: both">
     <button ui-sref="Vids">BACK</button>
 </div>

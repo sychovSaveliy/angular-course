@@ -63,8 +63,8 @@ function getMenu(req, res) {
         });
 }
 
-function getRec1(req, res) {
-    var path = './api/collections/recepies/1/get.json';
+function getRec(req, res) {
+    var path = './api/collections/recepies/'+ req.params.id +'/get.json';
     var servicePromise = filereader(fs, path);
 
     servicePromise
@@ -103,4 +103,4 @@ function onError(error) {
 
 
 
-module.exports = { testGetRequest, testPostRequest, getMenu, getHomeText, getRec1 };
+module.exports = { testGetRequest, testPostRequest, getMenu, getHomeText, getRec };

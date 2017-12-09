@@ -3,9 +3,9 @@
         "list": [
             {
                 "id": 1,
-                "type": "course",
-                "title": "Javascript Essential",
-                "description": "Курс для начинающий ...",
+                "img": "",
+                "title": "Курица запеченая целиком",
+                "description": "",
                 "keywords": "",
                 "links": {
                     "google": "",
@@ -14,9 +14,9 @@
             },
             {
                 "id": 2,
-                "type": "course",
-                "title": "Javascript Advanced",
-                "description": "Курс для продвинутых ...",
+                "img": "",
+                "title": "Паста Карбонара",
+                "description": "",
                 "keywords": "",
                 "links": {
                     "google": "",
@@ -25,9 +25,9 @@
             },
             {
                 "id": 3,
-                "type": "course",
-                "title": "Javascript Advanced",
-                "description": "Курс для продвинутых ...",
+                "img": "",
+                "title": "Бутики с маслом",
+                "description": "",
                 "keywords": "",
                 "links": {
                     "google": "",
@@ -36,9 +36,31 @@
             },
             {
                 "id": 4,
-                "type": "course",
-                "title": "Javascript Advanced",
-                "description": "Курс для продвинутых ...",
+                "img": "",
+                "title": "Самый яблочный пирог",
+                "description": "",
+                "keywords": "",
+                "links": {
+                    "google": "",
+                    "docs": ""
+                }
+            },
+            {
+                "id": 5,
+                "img": "",
+                "title": "Запеканка из картофеля и мясного фарша",
+                "description": "",
+                "keywords": "",
+                "links": {
+                    "google": "",
+                    "docs": ""
+                }
+            },
+            {
+                "id": 6,
+                "img": "",
+                "title": "Омары в соусе Ля-Руж",
+                "description": "",
                 "keywords": "",
                 "links": {
                     "google": "",
