@@ -30,6 +30,9 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                     templateUrl: 'app/src/page-blocks/layouts/l-block-list/l-block-list.html',
                     controller: 'l-flow.block-list'
                 }
+            },
+            params: {
+                data: {}
             }
         })
 
