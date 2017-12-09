@@ -4,10 +4,10 @@
 
 Directives
 
-## Basics
-
-`code examples`
-
 ## Links
 
-[Link to Google](http://www.google.com)
+https://habrahabr.ru/post/179755/
+
+https://habrahabr.ru/post/180365/
+
+https://metanit.com/web/angular/2.12.php
