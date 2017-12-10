@@ -4,11 +4,13 @@ myApp.directive("imageBlock", function () {
             console.log($scope, element, attrs);
 
 
-            $scope.message += " Directive changes"
+            $scope.message += " Directive changes";
+
+            // $scope.$parent.message += '_1'
         },
         restrict: "EA",
         templateUrl: 'directives/directive_element.html',
         // replace: true,
-        // scope: false
+        scope: true
     }
 });
