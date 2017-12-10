@@ -11,5 +11,20 @@ myApp.controller("firstCtrl", function ($scope, $timeout) {
     
     $scope.doIt = function () {
         console.log("DO IT");
+    };
+
+    $scope.menu = {
+        menu1: {
+            name: "menu 01",
+            src: "#"
+        },
+        menu2: {
+            name: "menu 02",
+            src: "#"
+        },
+        menu3: {
+            name: "menu 03",
+            src: "#"
+        }
     }
 });

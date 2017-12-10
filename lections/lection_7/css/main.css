@@ -48,3 +48,19 @@ table td {
     padding: 10px;
     text-align: center;
 }
+
+.directive-menu{
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    color: #a80931;
+    font-decoration: none;
+}
+
+.directive-menu:hover{
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    background-color: #FA1C71;
+    color: white;
+}
