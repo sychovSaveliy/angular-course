@@ -35,6 +35,9 @@ app.route('/menu')
 app.route('/collections/courses')
     .get($data.collections.getCourses);
 
+app.route('/collections/courses/:id')
+    .get($data.collections.getCourse);
+
 app.listen(port);
 console.log("Mock server listening on port " + port);
 

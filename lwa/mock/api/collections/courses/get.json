@@ -7,6 +7,7 @@
                 "title": "Javascript Essential",
                 "description": "Курс для начинающий ...",
                 "keywords": "",
+                "imgitem":"http://quintagroup.com/cms/js/js-articles/js-image/javascript-logo.png",
                 "links": {
                     "google": "",
                     "docs": ""
@@ -18,6 +19,7 @@
                 "title": "Javascript Advanced",
                 "description": "Курс для продвинутых ...",
                 "keywords": "",
+                "imgitem":"http://quintagroup.com/cms/js/js-articles/js-image/javascript-logo.png",
                 "links": {
                     "google": "",
                     "docs": ""

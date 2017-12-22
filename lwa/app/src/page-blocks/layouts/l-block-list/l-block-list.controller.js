@@ -1,7 +1,7 @@
-app.controller('l-flow.block-list', function($scope, $http) {
+app.controller('l-flow.block-list', function($scope, $http, $state) {
     $scope.flow = $scope.flow || {};
     $scope.flow.blockList = {
-        title: 'Hello',
+        // title: 'Hello',
         courses:[]
     }
 
@@ -16,4 +16,8 @@ app.controller('l-flow.block-list', function($scope, $http) {
     }
 
     init();
+
+    $scope.gotGoGourse = function (data) {
+        $state.go('courses',{ data: data });
+    }
 });

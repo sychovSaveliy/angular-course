@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": 2,
+    "type": "course",
+    "title": "Javascript Advanced",
+    "description": "Курс для продвинутых ...",
+    "keywords": "",
+    "imgitem": "http://quintagroup.com/cms/js/js-articles/js-image/javascript-logo.png",
+    "links": {
+      "google": "",
+      "docs": ""
+    }
+  },
+  "metadata": {
+    "links": {},
+    "language": "en"
+  }
+}

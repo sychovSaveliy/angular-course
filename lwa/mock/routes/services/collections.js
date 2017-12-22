@@ -39,14 +39,25 @@ function getCourses(req, res) {
         }, onError)
         .then(onAction)
         .then((response) => {
-            res.json(response);
+            res.json(response.data);
+        });
+}
+function getCourse(req, res) {
+    var path = './api/collections/courses/'+ req.params.id + '/get.json';
+    var servicePromise = filereader(fs, path);
+
+    servicePromise
+        .then((response) => {
+        console.log("GET", path);
+
+        return response;
+        }, onError)
+        .then((response) => {
+                res.json(response.data);
         });
 }
 
 function queryParamsHandler(response) {
-
-    return 
-
     return new Promise(function(resolve, reject) {
 
         getCollectionsMetadata()
@@ -55,18 +66,16 @@ function queryParamsHandler(response) {
                 response.inject.metadata = resp;
 
 
-            return response;
-        })
+                return response;
+            })
 
                 resolve(response);
             })
-    });
-
-}
+    }
 
 function onError(error) {
     console.error(error);
 }
 
 
-module.exports = { getCourses }
+module.exports = { getCourses, getCourse }

@@ -1,13 +1,13 @@
 <div class="wr-row">
     <h3>
-        Block List
+        Список курсов
     </h3>
     <div class="wr-main_container">
-        <div ng-repeat="item in flow.blockList.courses" id="block-list_courses">
-
-        </div>
-        <div ng-repeat="" id="block-list_courses">
-
+        <div ng-repeat="item in flow.blockList.courses" ng-click="gotGoGourse({ id: item.id} )" class="block-list_courses">
+            <div class="title-item">
+                {{item.title}}
+            </div>
+            <img ng-src="{{item.imgitem}}" alt="" class="block_list-img">
         </div>
 
 

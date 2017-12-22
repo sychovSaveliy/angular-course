@@ -3,17 +3,20 @@
     {
       "title": "Home",
       "desc": "",
-      "icon": ""
+      "icon": "",
+      "hover": "red"
     },
     {
       "title": "Task Board",
       "desc": "",
-      "icon": ""
+      "icon": "",
+      "hover": "red"
     },
     {
       "title": "Contacts",
       "desc": "",
-      "icon": ""
+      "icon": "",
+      "hover": "red"
     }
   ],
   "options": {

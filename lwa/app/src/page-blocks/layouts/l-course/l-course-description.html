@@ -1,0 +1,17 @@
+<div  class="wr-description_course">
+    <div class="name-course">
+        {{ flow.blockDescription.course.title}}
+    </div>
+    <div class="description_course">
+        {{ flow.blockDescription.course.description}}
+        <div class="box_img">
+            <img ng-src="{{flow.blockDescription.course.imgitem}}" alt="" class="">
+        </div>
+    </div>
+    <div  class="list_courses-block">
+        <ol>
+            <li ng-repeat="item in flow.blockDescription.course.list">{{item.title}}</li>
+        </ol>
+    </div>
+
+</div>

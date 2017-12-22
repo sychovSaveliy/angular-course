@@ -1,0 +1,30 @@
+{
+  "data": {
+    "id": 1,
+    "type": "course",
+    "title": "Javascript Essential",
+    "description": "Курс для начинающий ...",
+    "keywords": "",
+    "imgitem": "http://quintagroup.com/cms/js/js-articles/js-image/javascript-logo.png",
+    "links": {
+      "google": "",
+      "docs": ""
+    },
+    "list": [
+      {
+        "id": 1,
+        "title":"Введение в JavaScript",
+        "description": "Давайте посмотрим, что такого особенного в JavaScript, почему именно он, и какие еще технологии существуют, кроме JavaScript."
+      },
+      {
+        "id": 2,
+        "title":"Основы JavaScript",
+        "description": "В этой статье мы создадим простой скрипт и посмотрим, как он работает."
+      }
+    ]
+  },
+  "metadata": {
+    "links": {},
+    "language": "en"
+  }
+}

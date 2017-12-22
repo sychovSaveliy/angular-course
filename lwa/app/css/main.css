@@ -14,13 +14,27 @@ html, body {
 
 .flow__menu {
     width: 200px;
-    height: 100%;
+    min-height: 100vh;
+    padding-top: 20px;
+    background: silver;
 }
-
+.menu_list-item{
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
 .flow__block-list {
     height: 100%;
     width: calc(100% - 200px);
 }
+/*.ng-binding{*/
+    /*height: 50px;*/
+    /*!*margin: 5px 0px;*!*/
+    /*padding: 0 15px;*/
+    /*text-transform: uppercase;*/
+    /*cursor: pointer;*/
+/*}*/
 
 .wr-row h3{
     text-align: center;
@@ -34,7 +48,33 @@ html, body {
 }
 .block-list_courses{
     width: 45%;
-    height: 300px;
+    min-height: 300px;
     margin: 10px 20px;
     border: 1px solid red;
+    transition: all .3s;
+}
+/*.block-list_courses :hover{*/
+    /*transform: scale(1.1);*/
+/*}*/
+.title-item{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #CCCCCC;
+}
+.block_list-img{
+    display: block;
+    margin: 0 auto;
+}
+.name-course{
+    font-size: 24px;
+    text-align: center;
+    padding: 25px 0;
+    border-bottom: 1px solid silver;
+}
+.description_course{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
 }
