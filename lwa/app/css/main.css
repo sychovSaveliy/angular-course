@@ -73,8 +73,18 @@ html, body {
     padding: 25px 0;
     border-bottom: 1px solid silver;
 }
+
 .description_course{
     display: flex;
     justify-content: space-between;
     padding: 50px 20px;
 }
+.list_courses-block{
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    padding: 0 25px;
+}
+/*.list_courses-block ol{*/
+  /*list-style: none;*/
+/*}*/

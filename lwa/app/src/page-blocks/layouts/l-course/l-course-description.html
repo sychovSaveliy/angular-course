@@ -10,8 +10,11 @@
     </div>
     <div  class="list_courses-block">
         <ol>
-            <li ng-repeat="item in flow.blockDescription.course.list">{{item.title}}</li>
+            <li ng-repeat="item in flow.blockDescription.course.list" ng-click="">{{item.title}}</li>
         </ol>
+        <div  ng-repeat="item in flow.blockDescription.course.list" class="description_lection">
+            {{item.description}}
+        </div>
     </div>
 
 </div>

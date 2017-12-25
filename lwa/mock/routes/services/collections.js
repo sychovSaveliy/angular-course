@@ -10,7 +10,6 @@ function filereader(fsRef, path) {
         })
     })
 }
-
 function getCollectionsMetadata(req, res) {
     var path = './api/collections/metadata/get.json';
     var servicePromise = filereader(fs, path);

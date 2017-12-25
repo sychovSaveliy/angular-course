@@ -36,7 +36,8 @@ app.route('/collections/courses')
     .get($data.collections.getCourses);
 
 app.route('/collections/courses/:id')
-    .get($data.collections.getCourse);
+    .get($data.collections.getCourses);
+app.route('/collections/lection/:id');
 
 app.listen(port);
 console.log("Mock server listening on port " + port);
