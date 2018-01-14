@@ -19,7 +19,7 @@ app.directive("dragndrop", function () {
             function _onInit() {
                 isDragged = false;
                 $scope.model = $scope.model || {};
-
+                // console.log($scope.model);
                 if ($scope.model.type == 'dropzone') {
                     $element.on('dragover drop', ctrl.onDrop);
 
@@ -38,7 +38,9 @@ app.directive("dragndrop", function () {
                 }
 
                 isDragged = true;
-                console.log('dragstart', event);
+                $scope.model.state.dragId = $scope.model.id;
+                // console.log('dragstart', event, $scope.model);
+                $scope.$apply();
             }
 
             function onDrag(event) {
@@ -47,7 +49,7 @@ app.directive("dragndrop", function () {
 
             function onDragEnd(event) {
                 isDragged = false;
-                console.log('dragend', event);
+                // console.log('dragend', event);
             }
 
             function onDrop(event) {
@@ -57,7 +59,13 @@ app.directive("dragndrop", function () {
                 }
 
                 isDragged = false;
-                console.log('drop', event);
+                console.log('drop', $scope.model);
+
+                $scope.model.state.dropId = $scope.model.id;
+
+
+                $scope.model.dropHandler();
+                $scope.$apply();
             }
 
 

@@ -9,13 +9,21 @@
 
 <div ng-controller="l-flow">
     {{ flow.name }}
-    
+    {{ flow.taskManager.state }}
 
     <div data-ng-repeat="board in flow.taskManager.boards" 
-         data-dragndrop="{ type: 'dropzone' }" 
+         data-dragndrop="{ 
+             type: 'dropzone', 
+             id: board.id,
+             state: flow.taskManager.state, 
+             dropHandler: dropHandler 
+            }" 
          class="container">
-        <div data-ng-repeat="task in board"
-             data-dragndrop
+        <div data-ng-repeat="task in board.tasks"
+             data-dragndrop="{ 
+                 id: task.id, 
+                 state: flow.taskManager.state 
+                }"
              class="block">{{ task.title }}</div>
     </div>
 </div>

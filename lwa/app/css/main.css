@@ -30,10 +30,6 @@ html, body {
     background-color: red;
 }
 
-.block:nth-child(1) {
-    background-color: aqua;
-}
-
 .container {
     padding: 20px;
     background-color: azure;
