@@ -7,8 +7,15 @@
 
 
 
-<div>
-    block
-    <div data-dragndrop class="block"></div>
-    <div data-dragndrop draggable="false" class="block"></div>
+<div ng-controller="l-flow">
+    {{ flow.name }}
+    
+
+    <div data-ng-repeat="board in flow.taskManager.boards" 
+         data-dragndrop="{ type: 'dropzone' }" 
+         class="container">
+        <div data-ng-repeat="task in board"
+             data-dragndrop
+             class="block">{{ task.title }}</div>
+    </div>
 </div>

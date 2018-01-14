@@ -1,25 +1,36 @@
 app.directive("dragndrop", function () {
     return {
         restrict: "A",
-        scope: {},
+        scope: {
+            model: '=?dragndrop'
+        },
         link: function ($scope, $element, attrs) {
             var ctrl = this;
 
-            $scope.foo = Math.random();
-
+            ctrl.init = _onInit;
             ctrl.onDragStart = onDragStart;
             ctrl.onDrag = onDrag;
             ctrl.onDragEnd = onDragEnd;
             ctrl.onDrop = onDrop
-            
-            var isDragged = false;
 
-            $element[0].draggable = $element[0].draggable || true;
-            $element.on('dragstart', ctrl.onDragStart);
-            $element.on('drag', ctrl.onDrag);
+            var isDragged;
             
-            $element.on('dragover drop', ctrl.onDrop);
-            $element.on('dragend', ctrl.onDragEnd);
+           
+            function _onInit() {
+                isDragged = false;
+                $scope.model = $scope.model || {};
+
+                if ($scope.model.type == 'dropzone') {
+                    $element.on('dragover drop', ctrl.onDrop);
+
+                    return;
+                }
+
+                $element.on('dragstart', ctrl.onDragStart);
+                $element.on('drag', ctrl.onDrag);
+                $element.on('dragend', ctrl.onDragEnd);
+                $element[0].draggable = $element[0].draggable || true;
+            }
 
             function onDragStart(event) {
                 if (isDragged) {
@@ -27,7 +38,7 @@ app.directive("dragndrop", function () {
                 }
 
                 isDragged = true;
-                console.log('dragstart', event, $scope.foo);
+                console.log('dragstart', event);
             }
 
             function onDrag(event) {
@@ -36,7 +47,7 @@ app.directive("dragndrop", function () {
 
             function onDragEnd(event) {
                 isDragged = false;
-                console.log('dragend', event, $scope.foo);
+                console.log('dragend', event);
             }
 
             function onDrop(event) {
@@ -46,8 +57,11 @@ app.directive("dragndrop", function () {
                 }
 
                 isDragged = false;
-                console.log('drop', event, $scope.foo);
+                console.log('drop', event);
             }
+
+
+            ctrl.init();
         }
     }
 });

@@ -33,3 +33,13 @@ html, body {
 .block:nth-child(1) {
     background-color: aqua;
 }
+
+.container {
+    padding: 20px;
+    background-color: azure;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 250px;
+    min-height: 300px;
+    margin: 10px;
+}
