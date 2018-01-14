@@ -13,6 +13,7 @@ app.service('$flowData', function($data) {
 
 
 
+
     function removeLast(response) {
         response.data.list.pop();
 
