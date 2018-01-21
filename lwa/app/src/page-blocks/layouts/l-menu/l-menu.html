@@ -1,8 +1,10 @@
 <ul>
     <li ng-repeat="item in flow.menu.list">
-        {{ item.title }}
+        <a ui-sref="{{ item.state }}">{{ item.title }}</a>
     </li>
 </ul>
 
 <div ui-view="list"></div>
-<div ui-view="social"></div>
+<div ui-view="social">
+
+</div>

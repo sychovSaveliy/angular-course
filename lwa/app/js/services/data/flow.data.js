@@ -5,15 +5,6 @@ app.service('$flowData', function($data) {
                 .then(removeLast);
     };
 
-
-
-
-
-
-
-
-
-
     function removeLast(response) {
         response.data.list.pop();
 

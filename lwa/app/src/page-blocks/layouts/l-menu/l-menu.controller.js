@@ -1,20 +1,18 @@
 app.controller('l-flow.menu', function($scope, $flowData) {
-    $scope.flow = $scope.flow || {};
+    var ctrl = this;
 
-    $scope.flow.menu = {
-        list: []
-    };
+    ctrl.$onInit = _init;
 
-    console.log($flowData.menu());
+    function _init() {
+        $scope.flow = $scope.flow || {};
+        $scope.flow.menu = {
+            list: []
+        };
 
-
-    function init() {
         $flowData
-            .menu()
-            .then(function (response) {
-                $scope.flow.menu.list = response.data.list;
-            });
+                .menu()
+                .then(function (response) {
+                    $scope.flow.menu.list = response.data.list;
+                });
     }
-
-    init();
 });
