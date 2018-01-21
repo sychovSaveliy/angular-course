@@ -1,6 +1,4 @@
-app.controller('l-flow.home', function($scope, $alert) {
+app.controller('l-flow.home', function($scope) {
     $scope.flow = $scope.flow || {};
     $scope.flow.home = {};
-
-    $alert.showMessage({ message: 'Asset was added to Lightbox.' }, 'success');
 });
